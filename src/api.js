@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-const API = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '') + '/api/v1'
+const API = '/api/v1'
 const toApiUrl = url => {
   const clean = url.startsWith('/api') ? url.replace(/^\/api/, '') : url
   return `${API}${clean.startsWith('/') ? clean : '/' + clean}`
