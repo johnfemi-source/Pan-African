@@ -2,3 +2,7 @@ node_modules/
 dist/
 .env
 .vscode/
+/backend/
+backend/.gradle/
+backend/build/
+backend/src/main/resources/application-dev.properties
