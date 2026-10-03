@@ -2,6 +2,7 @@ import { Link, NavLink, Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useApi, flag, call, auth } from './api.js'
 import { Apply, Contact, About, Dashboard } from './pages.jsx'
+import logoUrl from '../logo.png'
 
 const CONTACT = { city: 'London, United Kingdom (address to be confirmed)', email: 'info@payan.example' } // TODO: replace placeholders
 
@@ -14,7 +15,7 @@ function Status({ s, children }) {
 function Layout({ children }) {
   return (<>
     <header className="bar">
-      <Link to="/" className="brand"><img src="/logo.png" alt="" className="logo-img" /><span>PAYAN</span></Link>
+      <Link to="/" className="brand"><img src={logoUrl} alt="" className="logo-img" /><span>PAYAN</span></Link>
       <nav aria-label="Main navigation">
         <NavLink to="/about">About</NavLink>
         <NavLink to="/apply">Apply</NavLink>
@@ -38,7 +39,7 @@ function Home() {
           <p className="lede">Across borders and generations, young people are building a more connected Africa.</p>
           <a className="hero-link" href="#regions">Explore the network <span aria-hidden="true">↓</span></a>
         </div>
-        <div className="hero-art"><img src="/logo.png" alt="Pan-African Youth Ambassadors Network logo" className="hero-mark" /></div>
+        <div className="hero-art"><img src={logoUrl} alt="Pan-African Youth Ambassadors Network logo" className="hero-mark" /></div>
       </div>
     </section>
     <section id="regions" className="region-section">
