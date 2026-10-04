@@ -4,7 +4,7 @@ import { useApi, flag, call, auth } from './api.js'
 import { Apply, Contact, About, Dashboard } from './pages.jsx'
 import logoUrl from '../logo.png'
 
-const CONTACT = { city: 'London, United Kingdom (address to be confirmed)', email: 'info@payan.example' } // TODO: replace placeholders
+const CONTACT = { email: 'panafricanyouthambassadorsnetw@gmail.com' }
 
 function Status({ s, children }) {
   if (s.error) return <p className="note">Could not load this page: {s.error}. Refresh to try again.</p>
@@ -57,7 +57,7 @@ function Home() {
       <div><h2>Past members and events</h2><p className="note">Group photos will appear here once the gallery is built.</p></div>
     </section>
     <section id="contact" className="split">
-      <div><h2>Contact</h2><p>{CONTACT.city}<br /><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p></div>
+      <div><h2>Contact</h2><p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p></div>
     </section>
   </>)
 }
